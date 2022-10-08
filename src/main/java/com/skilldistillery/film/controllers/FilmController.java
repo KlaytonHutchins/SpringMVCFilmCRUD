@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.InternalResourceView;
 
 import com.skilldistillery.film.data.FilmDAO;
 import com.skilldistillery.film.entities.Film;
@@ -38,10 +39,10 @@ public class FilmController {
 	
 	@RequestMapping(path = "deleteFilm.do", method = RequestMethod.POST)
 	public ModelAndView deleteFilm(@RequestParam("filmId") int filmId) {
-		ModelAndView mav = new ModelAndView();
+		InternalResourceView resourceView= new InternalResourceView("/index.html");
+		ModelAndView mav = new ModelAndView(resourceView);
 		Boolean bool = filmDAO.removeFilm(filmDAO.findFilmById(filmId));
 //		mav.addObject("films", films);
-		mav.setViewName("films");
 		return mav;
 	}
 	
