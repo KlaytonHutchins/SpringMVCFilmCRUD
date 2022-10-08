@@ -13,7 +13,6 @@
 <body>
 	<!-- Need to create a for loop here -->
 	<h1>Film Details</h1>
-
 	<c:choose>
 		<c:when test="${! empty film}">
 				<table class="table">
@@ -26,6 +25,8 @@
 							<th scope="col">Year</th>
 							<th scope="col">Rating</th>
 							<th scope="col">Category</th>
+							<th scope="col">Actors</th>
+							
 						</tr></thead>
 					<tbody>
 						<tr>
@@ -36,11 +37,12 @@
 							<td>${film.releaseYear}</td>
 							<td>${film.rating}</td>
 							<td>${film.category}</td>
+							<td>${film.actors}</td>
 						</tr>
 				</table>
 		</c:when>
 		<c:otherwise>
-			<p>No state found</p>
+			<p>No such film found</p>
 		</c:otherwise>
 	</c:choose>
 
