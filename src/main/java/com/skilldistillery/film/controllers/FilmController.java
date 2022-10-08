@@ -31,7 +31,7 @@ public class FilmController {
 		ModelAndView mav = new ModelAndView();
 		List<Film> films = filmDAO.findFilmByKeyword(keyword);
 		mav.addObject("films", films);
-		mav.setViewName("film");
+		mav.setViewName("films");
 		return mav;
 	}
 	
