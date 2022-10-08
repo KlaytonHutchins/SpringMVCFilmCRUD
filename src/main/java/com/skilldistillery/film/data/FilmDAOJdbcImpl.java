@@ -56,6 +56,8 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		System.out.println(film);
+
 		return film;
 	}
 
@@ -64,6 +66,8 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		Film film = null;
 		Connection conn = null;
 		String sql = "SELECT * FROM film WHERE title LIKE ? OR description LIKE ?";
+		System.out.println(keyword); // ADDED FOR DEBUG
+
 		try {
 			conn = DriverManager.getConnection(URL, user, pass);
 			PreparedStatement stmt = conn.prepareStatement(sql);
@@ -86,6 +90,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		System.out.println(films);  // ADDED FOR DEBUG
 		return films;
 	}
 
