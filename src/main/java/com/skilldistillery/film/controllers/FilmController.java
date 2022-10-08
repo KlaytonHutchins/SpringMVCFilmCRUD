@@ -19,7 +19,7 @@ public class FilmController {
 	@RequestMapping(path = "showFilm.do", method = RequestMethod.GET, params = "filmId")
 	public ModelAndView showFilm(Integer filmId) {
 		ModelAndView mav = new ModelAndView();
-		Film film = filmDAO.getFilmById(filmId);
+		Film film = filmDAO.findFilmById(filmId);
 		mav.addObject("film", film);
 		mav.setViewName("film");
 		return mav;
