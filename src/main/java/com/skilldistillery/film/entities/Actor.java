@@ -69,7 +69,7 @@ public class Actor {
 	
 	@Override
 	public String toString() {
-		return "Actor id: " + id + "\tName: " + firstName + " " + lastName;
+		return firstName + " " + lastName;
 	}
 	
 	public String toStringIndented() {
