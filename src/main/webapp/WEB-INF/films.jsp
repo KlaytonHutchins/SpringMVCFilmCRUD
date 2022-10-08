@@ -17,10 +17,8 @@
 <body>
 	<!-- Need to create a for loop here -->
 	<h1>Film Details</h1>
-		${films}
-	
-	<c:choose>		
-	<c:when test="${! empty films}">
+	<c:choose>
+		<c:when test="${! empty films}">
 			<table class="table">
 				<thead class="thead-dark">
 					<tr>
@@ -36,8 +34,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				<c:forEach items="${films}" var="film">
-					<c:forEach items="${film}" var="alist">
+					<c:forEach items="${films}" var="film">
 						<tr>
 							<td>${film.id}</td>
 							<td>${film.title}</td>
@@ -50,7 +47,7 @@
 							${alist.toString()}<br>
 								</c:forEach></td>
 						</tr>
-					</c:forEach></c:forEach>
+					</c:forEach>
 			</table>
 
 		</c:when>
