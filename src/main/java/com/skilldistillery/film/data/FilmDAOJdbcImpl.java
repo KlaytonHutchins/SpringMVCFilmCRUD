@@ -89,7 +89,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		return films;
 	}
 
-	public Actor findActorById(int actorId) throws SQLException {
+	public Actor findActorById(int actorId) {
 		Actor actor = null;
 		Connection conn;
 		String sql = "SELECT * FROM actor WHERE id = ?";
@@ -112,7 +112,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		return actor;
 	}
 
-	public List<Actor> findActorsByName(String name) throws SQLException {
+	public List<Actor> findActorsByName(String name) {
 		List<Actor> actors = new ArrayList<>();
 		Actor actor = null;
 		Connection conn;
@@ -138,7 +138,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		return actors;
 	}
 
-	public List<Actor> findActorsByFilmId(int filmId) throws SQLException {
+	public List<Actor> findActorsByFilmId(int filmId) {
 		List<Actor> actors = new ArrayList<Actor>();
 		Actor actor = null;
 		Connection conn;
@@ -162,7 +162,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		return actors;
 	}
 
-	public List<Film> findFilmsByActorId(int actorId) throws SQLException {
+	public List<Film> findFilmsByActorId(int actorId) {
 		List<Film> films = new ArrayList<Film>();
 		Film film = null;
 		Connection conn;
@@ -190,7 +190,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		return films;
 	}
 
-	private String determineLanguage(int langId) throws SQLException {
+	private String determineLanguage(int langId) {
 		String language = "";
 		Connection conn;
 		String sql = "SELECT name FROM language WHERE id = ?";
@@ -211,7 +211,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		return language;
 	}
 	
-	private int determineLanguageId(String language) throws SQLException {
+	private int determineLanguageId(String language) {
 		int languageId = 0;
 		Connection conn;
 		String sql = "SELECT id FROM language WHERE name = ?";
@@ -232,7 +232,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		return languageId;
 	}
 
-	private String determineCategory(int filmId) throws SQLException {
+	private String determineCategory(int filmId) {
 		String category = "";
 		Connection conn;
 		String sql = "SELECT category.name FROM category JOIN film_category ON category.id = film_category.category_id WHERE film_category.film_id = ?";
