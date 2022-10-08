@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Film Search by ID Results</title>
+<title>Film Search by Keyword Results</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -18,7 +18,7 @@
 	<!-- Need to create a for loop here -->
 	<h1>Film Details</h1>
 	<c:choose>
-		<c:when test="${! empty film}">
+		<c:when test="${! empty films}">
 			<table class="table">
 				<thead class="thead-dark">
 					<tr>
@@ -34,20 +34,23 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>${film.id}</td>
-						<td>${film.title}</td>
-						<td>${film.description}</td>
-						<td>${film.length}</td>
-						<td>${film.releaseYear}</td>
-						<td>${film.rating}</td>
-						<td>${film.category}</td>
-						<td><c:forEach items="${film.actors}" var="alist">
+					<c:forEach items="${films}" var="alist">
+						<tr>
+							<td>${film.id}</td>
+							<td>${film.title}</td>
+							<td>${film.description}</td>
+							<td>${film.length}</td>
+							<td>${film.releaseYear}</td>
+							<td>${film.rating}</td>
+							<td>${film.category}</td>
+							<td><c:forEach items="${film.actors}" var="alist">
 							${alist.toString()}<br>
-						</c:forEach></td>				
+								</c:forEach></td>
+						</tr>
+					</c:forEach>
 			</table>
 
-								</c:when>
+		</c:when>
 		<c:otherwise>
 			<p>No such film found</p>
 		</c:otherwise>
