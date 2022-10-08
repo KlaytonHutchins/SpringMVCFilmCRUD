@@ -36,7 +36,7 @@ public class FilmController {
 		return mav;
 	}
 	
-	@RequestMapping(path = "deleteFilm.do", method = RequestMethod.POST, params = "filmWord")
+	@RequestMapping(path = "deleteFilm.do", method = RequestMethod.POST, params = "filmId")
 	public ModelAndView showFilm(@RequestParam("filmId") int filmId) {
 		ModelAndView mav = new ModelAndView();
 		Boolean bool = filmDAO.removeFilm(filmDAO.findFilmById(filmId));
