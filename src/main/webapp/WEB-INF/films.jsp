@@ -34,7 +34,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${films}" var="alist">
+					<c:forEach items="${films.film}" var="film">
 						<tr>
 							<td>${film.id}</td>
 							<td>${film.title}</td>
