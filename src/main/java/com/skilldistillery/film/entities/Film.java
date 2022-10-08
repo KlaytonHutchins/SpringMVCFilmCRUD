@@ -187,10 +187,6 @@ public class Film {
 				+ description + "\nLanguage: " + languageName + "\nCategory: " + category;
 	}
 	
-	public String toStringIndented() {
-		return "\tTitle: " + title + "\n\tRelease Year: " + releaseYear + "\n\tRating: " + rating + "\n\tDescription: "
-				+ description + "\n\tLanguage: " + languageName + "\n\tCategory: " + category;
-	}
 	public String toStringMoreInfo() {
 		return "\nId: " + id + "\n" + this
 		+ "\nRental Duration: " + rentalDuration + "\nRental Rate: "
@@ -198,4 +194,5 @@ public class Film {
 		+ "\nReplacement Cost: " + replacementCost
 		+ "\nSpecial Features: " + specialFeatures;
 	}
+	
 }

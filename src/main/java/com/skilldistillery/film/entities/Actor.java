@@ -72,8 +72,4 @@ public class Actor {
 		return firstName + " " + lastName;
 	}
 	
-	public String toStringIndented() {
-		return "\tActor id: " + id + "\tName: " + firstName + " " + lastName;
-	}
-	
 }
