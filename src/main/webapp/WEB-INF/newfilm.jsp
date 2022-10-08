@@ -5,18 +5,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Film Search by ID Results</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
 	crossorigin="anonymous">
 
+<meta charset="UTF-8">
+<title>New Film Results</title>
 </head>
 <body>
-	<!-- Need to create a for loop here -->
-	<h1>Film Details</h1>
+	<h1>Film Add Success!</h1>
 	<c:choose>
 		<c:when test="${! empty film}">
 			<table class="table">
@@ -41,16 +40,17 @@
 						<td>${film.length}</td>
 						<td>${film.releaseYear}</td>
 						<td>${film.rating}</td>
-						<td>${film.category}</td>
+<%-- 						<td>${film.category}</td>
 						<td><c:forEach items="${film.actors}" var="alist">
 							${alist.toString()}<br>
 						</c:forEach></td>				
-			</table>
+ --%>			</table>
 
 								</c:when>
 		<c:otherwise>
-			<p>No such film found</p>
+			<p>Unable to add film (film not found in database)</p>
 		</c:otherwise>
 	</c:choose>
+
 </body>
 </html>

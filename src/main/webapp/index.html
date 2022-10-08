@@ -18,27 +18,65 @@
 			<form action="showFilm.do" method="GET">
 				<div class="input-group mb-3">
 					<div class="input-group-prepend">
-						<span class="input-group-text" id="inputGroup-sizing-default">Film ID</span>
+						<span class="input-group-text" id="inputGroup-sizing-default">Film
+							ID</span>
 					</div>
 					<input type="text" name="filmId" class="form-control"
-						aria-label="Film ID"
-						aria-describedby="inputGroup-sizing-default">
+						aria-label="Film ID" aria-describedby="inputGroup-sizing-default">
 					<input type="submit" class="btn btn btn-secondary" value="Submit">
 				</div>
 			</form>
-			<h3>Search by Film Keyword</h3><form action="showFilm.do" method="GET">
+			<h3>Search by Film Keyword</h3>
+			<form action="showFilm.do" method="GET">
 				<div class="input-group mb-3">
 					<div class="input-group-prepend">
-						<span class="input-group-text" id="inputGroup-sizing-default">Film Keyword</span>
+						<span class="input-group-text" id="inputGroup-sizing-default">Film
+							Keyword</span>
 					</div>
 					<input type="text" name="filmWord" class="form-control"
 						aria-label="Film Keyword"
-						aria-describedby="inputGroup-sizing-default">
-					<input type="submit" class="btn btn btn-secondary" value="Submit">
+						aria-describedby="inputGroup-sizing-default"> <input
+						type="submit" class="btn btn btn-secondary" value="Submit">
 				</div>
 			</form>
 		</div>
 	</div>
+	<div class="container">
+
+		<h3>Add New Film</h3>
+		<p>
+		<form action="showFilm.do" method="GET">
+			<div class="container">
+
+				<div class="form-group">
+					<label for="Film Title">Film Title</label> <input type="text"
+						class="form-control" name="inputFilmTitle">
+				</div>
+				<div class="form-group">
+					<label for="Film Title">Film Description</label> <input type="text"
+						class="form-control" name="inputFilmDescription">
+				</div>
+				<div class="form-group">
+					<label for="Film Title">Film Release Year</label> <input
+						type="text" class="form-control" name="inputFilmReleaseYear">
+				</div>
+				<div class="form-group">
+					<label for="Film Title">Film Language</label> <input type="text"
+						class="form-control" name="inputFilmLanguage">
+				</div>
+				<div class="form-group">
+					<label for="Film Title">Film Length in Minutes</label> <input
+						type="text" class="form-control" name="inputFilmLength">
+				</div>
+				<div class="form-group">
+					<label for="Film Title">Film Rating</label> <input type="text"
+						class="form-control" name="inputFilmRating">
+				</div>
+				<br>
+				<button type="submit" class="btn btn btn-secondary"
+					name="submitFilm">Add New Film</button>
+			</div>
+		</form>
 </body>
 </html>
 

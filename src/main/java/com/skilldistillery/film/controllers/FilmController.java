@@ -36,4 +36,29 @@ public class FilmController {
 		return mav;
 	}
 	
+	@RequestMapping(path = "showFilm.do", 
+			method = RequestMethod.GET, 
+			params = { "inputFilmTitle", "inputFilmDescription", "inputFilmReleaseYear", "inputFilmLanguage", "inputFilmLength","inputFilmRating" } )
+	public ModelAndView addFilm(@RequestParam("inputFilmTitle") String title,
+								@RequestParam("inputFilmDescription") String description,
+								@RequestParam("inputFilmReleaseYear") int releaseYear,
+								@RequestParam("inputFilmLanguage") String filmLanguage,
+								@RequestParam("inputFilmLength") int length,
+								@RequestParam("inputFilmRating") String rating) {
+		ModelAndView mav = new ModelAndView();
+		Film film = new Film(); 
+		film.setTitle(title);
+		film.setDescription(description);
+		film.setReleaseYear(releaseYear);
+		film.setLanguage(filmLanguage);
+		film.setLength(length);
+		film.setRating(rating);
+		film.setRentalDuration(0);
+		film.setRentalRate(0.0);
+		film.setReplacementCost(0.0);
+		film = filmDAO.createFilm(film);
+		mav.addObject("film", film);
+		mav.setViewName("newfilm");
+		return mav;
+	}
 }
