@@ -44,7 +44,8 @@
 						<td>${film.category}</td>
 						<td><c:forEach items="${film.actors}" var="alist">
 							${alist.toString()}<br>
-						</c:forEach></td>				
+						</c:forEach></td>	
+						<td><form action="deleteFilm.do" method="POST"><input type="submit" class="btn btn btn-secondary" value="Delete"></form></td>			
 			</table>
 
 								</c:when>
