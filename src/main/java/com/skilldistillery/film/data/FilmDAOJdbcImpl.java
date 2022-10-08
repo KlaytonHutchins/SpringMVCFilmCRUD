@@ -103,4 +103,8 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		return category;
 	}
 	
+	// We'll need a determineActors() method that populates an an Actor list
+	// within the FindFilm methods we plan on implementing in order to call 
+	// up a list of actors.
+	
 }
