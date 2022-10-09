@@ -54,7 +54,7 @@
 						</tr>
 					</c:forEach>
 			</table>
-
+			<a href="index.html"><button type="submit" class="btn btn btn-secondary">Return to Home</button></a>
 		</c:when>
 		<c:otherwise>
 			<p>No such film found</p>

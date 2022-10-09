@@ -9,5 +9,6 @@
 <body>
 <img src="https://media4.giphy.com/media/d2lcHJTG5Tscg/giphy.gif"></img>
 <h1>There was a problem inserting that particular movie :(</h1>
+<a href="index.html"><button type="submit" class="btn btn btn-secondary">Return to Home</button></a>
 </body>
 </html>
