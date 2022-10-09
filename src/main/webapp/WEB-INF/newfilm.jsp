@@ -47,12 +47,12 @@
 					</tr>
 				</tbody>
 			</table>
-			<a href="index.html"><button type="submit" class="btn btn btn-secondary">Return to Home</button></a>
 		</c:when>
 		<c:otherwise>
 			<p>Unable to add film (film not found in database)</p>
 		</c:otherwise>
 	</c:choose>
+			<a href="index.html"><button type="submit" class="btn btn btn-secondary">Return to Home</button></a>
 
 </body>
 </html>

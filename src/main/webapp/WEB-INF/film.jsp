@@ -89,12 +89,12 @@
 					</tbody>
 					</form>
 				</table>
-				<a href="index.html"><button type="submit" class="btn btn btn-secondary">Return to Home</button></a>
 				</c:when>
 			<c:otherwise>
 				<p>No such film found</p>
 			</c:otherwise>
 		</c:choose>
+				<a href="index.html"><button type="submit" class="btn btn btn-secondary">Return to Home</button></a>
 	</div>	
 </body>
 </html>
