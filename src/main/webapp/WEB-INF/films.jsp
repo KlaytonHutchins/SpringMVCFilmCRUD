@@ -36,7 +36,7 @@
 					<c:forEach items="${films}" var="film">
 						<tr>
 							<td>${film.id}</td>
-							<td>${film.title}</td>
+							<td><a href="showFilm.do?filmId=${film.id}">${film.title}</a></td>
 							<td>${film.description}</td>
 							<td>${film.length}</td>
 							<td>${film.releaseYear}</td>
