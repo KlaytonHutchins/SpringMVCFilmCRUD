@@ -37,7 +37,6 @@ public class FilmController {
 		return mav;
 	}
 	
-<<<<<<< HEAD
 	@RequestMapping(path = "showFilm.do", 
 			method = RequestMethod.GET, 
 			params = { "inputFilmTitle", "inputFilmDescription", "inputFilmReleaseYear", "inputFilmLanguage", "inputFilmLength","inputFilmRating" } )
@@ -63,7 +62,7 @@ public class FilmController {
 		mav.setViewName("newfilm");
 		return mav;
 	}
-=======
+
 	@RequestMapping(path = "deleteFilm.do", method = RequestMethod.POST)
 	public ModelAndView deleteFilm(@RequestParam("filmId") int filmId) {
 		InternalResourceView resourceView= new InternalResourceView("/index.html");
@@ -73,5 +72,4 @@ public class FilmController {
 		return mav;
 	}
 	
->>>>>>> ab211454ae2ca2bd99347be2ddea2362afe4f869
 }
