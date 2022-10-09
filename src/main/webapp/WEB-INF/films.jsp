@@ -15,7 +15,6 @@
 
 </head>
 <body>
-	<!-- Need to create a for loop here -->
 	<h1>Film Details</h1>
 	<c:choose>
 		<c:when test="${! empty films}">
@@ -46,6 +45,9 @@
 							<td><c:forEach items="${film.actors}" var="alist">
 							${alist.toString()}<br>
 								</c:forEach></td>
+								<td>
+						<c:set value="${film.id}" var="filmId"></c:set>
+						<form action="deleteFilm.do" method="POST" ><input name="filmId" value="${filmId}" type="hidden"><input type="submit" name="filmId" value="Delete" class="btn btn-danger"></form></td>		
 						</tr>
 					</c:forEach>
 			</table>

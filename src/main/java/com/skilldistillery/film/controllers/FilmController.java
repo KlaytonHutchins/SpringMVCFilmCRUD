@@ -65,6 +65,7 @@ public class FilmController {
 
 	@RequestMapping(path = "deleteFilm.do", method = RequestMethod.POST)
 	public ModelAndView deleteFilm(@RequestParam("filmId") int filmId) {
+		System.out.println(filmId);
 		System.out.println("Tryna delete: " + filmId);
 		InternalResourceView resourceView= new InternalResourceView("/index.html");
 		ModelAndView mav = new ModelAndView(resourceView);
