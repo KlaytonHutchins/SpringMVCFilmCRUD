@@ -51,8 +51,7 @@
 								<input name="filmId" value="${film.id}" type="hidden"> <input
 									type="submit" name="filmId" value="Delete "
 									class="btn btn-danger">
-								<!-- 								Hide the input behind a do nothing button.
- -->
+						<!-- Hide the input behind a do nothing button.-->
 							</form></td>
 					<tbody class="table-secondary">
 						<tr class="table-secondary">

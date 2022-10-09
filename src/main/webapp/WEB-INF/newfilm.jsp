@@ -40,13 +40,15 @@
 						<td>${film.length}</td>
 						<td>${film.releaseYear}</td>
 						<td>${film.rating}</td>
-<%-- 						<td>${film.category}</td>
+						<%--<td>${film.category}</td>
 						<td><c:forEach items="${film.actors}" var="alist">
 							${alist.toString()}<br>
-						</c:forEach></td>				
- --%>			</table>
-
-								</c:when>
+						</c:forEach></td>--%>
+					</tr>
+				</tbody>
+			</table>
+			<a href="index.html"><button type="submit" class="btn btn btn-secondary">Return to Home</button></a>
+		</c:when>
 		<c:otherwise>
 			<p>Unable to add film (film not found in database)</p>
 		</c:otherwise>

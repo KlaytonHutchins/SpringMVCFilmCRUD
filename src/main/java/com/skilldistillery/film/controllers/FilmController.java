@@ -95,16 +95,16 @@ import com.skilldistillery.film.entities.Film;
 			Film updateFilm = filmDAO.findFilmById(filmId); 
 			ModelAndView mav = new ModelAndView();
 
-			if (!title.isBlank()) updateFilm.setTitle(title);
-			if (!description.isBlank()) updateFilm.setDescription(description);
-			if (!length.isBlank()) updateFilm.setLength(Integer.parseInt(length));
-			if (!releaseYear.isBlank()) updateFilm.setReleaseYear(Integer.parseInt(releaseYear));
-			if (!rating.isBlank()) updateFilm.setRating(rating);
-			if (!category.isBlank()) updateFilm.setCategory(category);
+			if (!title.isEmpty()) updateFilm.setTitle(title);
+			if (!description.isEmpty()) updateFilm.setDescription(description);
+			if (!length.isEmpty()) updateFilm.setLength(Integer.parseInt(length));
+			if (!releaseYear.isEmpty()) updateFilm.setReleaseYear(Integer.parseInt(releaseYear));
+			if (!rating.isEmpty()) updateFilm.setRating(rating);
+			if (!category.isEmpty()) updateFilm.setCategory(category);
 			System.out.println(filmId + title + description + length + releaseYear + rating + category);
 			
 			// I need to fill in nonsense values to cover the other stmt sets 
-			if (updateFilm.getLanguage().isBlank()) updateFilm.setLanguage("English");
+			if (updateFilm.getLanguage().isEmpty()) updateFilm.setLanguage("English");
 			updateFilm.setRentalDuration(0);
 			updateFilm.setRentalRate(0.0);
 			updateFilm.setReplacementCost(0.0);
