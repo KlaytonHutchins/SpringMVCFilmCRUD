@@ -56,7 +56,6 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(film);
 
 		return film;
 	}
@@ -66,7 +65,6 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		Film film = null;
 		Connection conn = null;
 		String sql = "SELECT * FROM film WHERE title LIKE ? OR description LIKE ?";
-		System.out.println(keyword); // ADDED FOR DEBUG
 
 		try {
 			conn = DriverManager.getConnection(URL, user, pass);
@@ -90,7 +88,6 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(films);  // ADDED FOR DEBUG
 		return films;
 	}
 
@@ -314,7 +311,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 		try {
 			conn = DriverManager.getConnection(URL, user, pass);
 			conn.setAutoCommit(false);
-			String sql = "UPDATE film SET ";
+			String sql = "update film set title=?, description=?, release_year=?, language_id=?, rental_duration=?, rental_rate=?, length=?, replacement_cost=?, rating=? where id=?";
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1, film.getTitle());
 			stmt.setString(2, film.getDescription());
@@ -325,6 +322,7 @@ public class FilmDAOJdbcImpl implements FilmDAO {
 			stmt.setInt(7, film.getLength());
 			stmt.setDouble(8, film.getReplacementCost());
 			stmt.setString(9, film.getRating());
+			stmt.setInt(10, film.getId());
 			int updateCount = stmt.executeUpdate();
 			if (updateCount == 1) {
 				sql = "DELETE FROM film_actor WHERE film_id = ?";
