@@ -45,8 +45,10 @@
 						<td><c:forEach items="${film.actors}" var="alist">
 							${alist.toString()}<br>
 						</c:forEach></td>	
-						<td><form action="deleteFilm.do" method="POST" ><input type="submit" class="btn btn btn-secondary" name="filmId" value="${film.id }"></form></td>		
-			</table>
+						<td>
+						<c:set value="${film.id}" var="filmId"></c:set>
+						<form action="deleteFilm.do" method="POST" ><input name="filmId" value="${filmId}" type="hidden"><input type="submit" name="filmId" value="Delete" class="btn btn-danger"></form></td>		
+ 			</table>
 
 								</c:when>
 		<c:otherwise>
