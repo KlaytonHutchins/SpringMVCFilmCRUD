@@ -47,7 +47,7 @@
 						</c:forEach></td>	
 						<td>
 						<c:set value="${film.id}" var="filmId"></c:set>
-						<form action="deleteFilm.do" method="POST" ><input type="submit" name="filmId" value="${filmId}" class="btn btn-danger"> Click to delete this film from the database</form></td>		
+						<form action="deleteFilm.do" method="POST" ><input name="filmId" value="${filmId}" type="hidden"><input type="submit" name="filmId" value="Delete" class="btn btn-danger"></form></td>		
  			</table>
 
 								</c:when>
