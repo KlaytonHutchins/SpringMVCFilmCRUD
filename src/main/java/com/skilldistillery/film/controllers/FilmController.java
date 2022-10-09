@@ -110,8 +110,6 @@ import com.skilldistillery.film.entities.Film;
 			updateFilm.setReplacementCost(0.0);
 			List<Actor> nullActorList = new ArrayList<>();
 			updateFilm.setActors(nullActorList);
-			System.out.println(updateFilm);
-
 			try {
 			filmDAO.updateFilm(updateFilm);
 			} catch (Exception e) {
